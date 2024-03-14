@@ -34,6 +34,8 @@ public class Main {
         Employee e1 = MainEmployee.get("700001");
         Employee e2 = MainEmployee.get("700003");
 
+        MainPassenger.get("800001");
+
         //MainFlight.save(new Flight("1",MainPlane.get("100001"),));
 
     }
