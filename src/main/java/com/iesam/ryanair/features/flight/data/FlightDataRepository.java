@@ -17,6 +17,15 @@ public class FlightDataRepository implements FlightRepository {
         listFlight.add(flight);
     }
 
+    @Override
+    public Flight print(String id) {
+        for(int i = 0; i < listFlight.size(); i++){
+            if(listFlight.get(i).getId().equals(id)){
+                return listFlight.get(i);
+            }
+        }
+        return null ;    }
+
     public static FlightDataRepository newInstance(){
         if(instance == null){
             instance = new FlightDataRepository();
