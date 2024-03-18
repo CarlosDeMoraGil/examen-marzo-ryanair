@@ -17,6 +17,17 @@ public class PassengerDataRepository implements PassengerRepository {
         listPassenger.add(passenger);
     }
 
+    @Override
+    public Passenger get(String id) {
+        for(int i = 0; i < listPassenger.size(); i++){
+            if(listPassenger.get(i).getDni().equals(id)){
+                return listPassenger.get(i);
+            }
+        }
+        return null ;
+    }
+
+
     public static PassengerDataRepository newInstance(){
         if(instance == null){
             instance = new PassengerDataRepository();
